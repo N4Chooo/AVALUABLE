@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>EX2</title>
-</head>
-<body>
-    <h1>Ex2</h1>
-    <?php
+<?php
 /* SUMA DELS VALORS D'UN ARRAY */ 
 //El resultat hauria de ser: 10. Per què no funiona?
  
@@ -71,19 +64,19 @@ for($i=0;$i<$numero;$i++){
     $nombres[$i]= rand(1,15);
 }
 //Creem un array anomenat $quadrat que calcularà el quadrat dels nombres anteriors i el mostrem. És a dir nombre * nombre
+$quadrat=[];
 foreach ($nombres as $value){
-    $quadrat[]=$value * $value;
+    $quadrat=$value * $value;
 }
 
 
 //Creem un array anomenat $cub que calcularà el cub dels nombres anteriors i el mostrem. És a dir nombre * nombre * nombre
- 
+ $cub=[];
  foreach ($nombres as $value){
-    $cub[]=$value * $value * $value;
+    $cub=$value * $value * $value;
 }
+echo "Nombres" . implode( "," . $nombres);
 var_dump($nombres,$quadrat,$cub);
-
-
 // Modifiqueu el codi per a utilitzar el foreach i emplenar els arrays $quadrat i $cub
 
 
@@ -140,7 +133,4 @@ function diesMes($mes, array $mesos, array $dies_mesos) {
 }
 //Indica els dies que té el més de Juny.
 echo "<br/>Els dies de Juny són: " . diesMes("Juny", $mesos, $dies_mesos); // Mostra: 30
-?>    
-
-</body>
-</html>
+?>  
