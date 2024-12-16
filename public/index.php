@@ -2,11 +2,7 @@
 <html>
 <head>
     <title>AEV51</title>
-   <style>
-   ${
-   color:blue;
-   }
-   </style>
+  
 </head>
 <body>
     <h1 align="center">AEV51</h1>
