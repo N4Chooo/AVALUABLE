@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>class</title>
+</head>
+<body>
+</body>
+</html>
+<?php
+class Juegos{
+    public $Tipos= '';
+
+    public function GetTipos(){
+        echo $this->Tipos . "<br>";
+    }
+}
+$Tipo1= new Juegos();
+$Tipo2= new Juegos();
+$Tipo3= new Juegos();
+
+$Tipo1->Tipos ="Carreras";
+$Tipo2->Tipos ="PVP";
+$Tipo3->Tipos ="Mundo Abierto";
+
+$Tipo1->getTipos();
+$Tipo2->getTipos();
+$Tipo3->getTipos();
+?>

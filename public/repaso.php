@@ -11,58 +11,59 @@ declare(strict_types=1);
 // Estem definint una funció, però no funciona quan l'executem.
 // Mireu l'error que obteniu, llegiu-lo i us hauria d'indicar el problema...,
 // De vegades, fins i tot el vostre IDE us pot dir què passa
-echo "<b>Exercici 1:</b>";
-
+echo "Exercici 1 comença ací:";
+//////////////////////////////////////////////////////////////////
 function nou_Exercici($x) {
-    $bloc = "<br/><hr/><br/><br/><b>Exercici $x:</b><br/>";
+    $bloc = "<br/><hr/><br/><br/>Exercici $x comença ací:<br/>";
     echo $bloc;
 }
 
 nou_Exercici(2);
-
+//////////////////////////////////////////////////////////////////
 // === Exercici 2 ===
 // A continuació creem una matriu setmanal amb tots els dies de la setmana.
 // Aleshores intentem imprimir el primer dia, que és dilluns, executem el codi i veiem què passa.
 $setmana = ["dilluns", "dimarts", "dimecres", "dijous", "divendres", "disabte", "diumenge"];
-$dilluns = $setmana[1];
+$dilluns = $setmana[0];
 
 echo $dilluns;
 
 
 nou_Exercici(3);
+//////////////////////////////////////////////////////////////////
 // === Exercici 3 ===
 // Això hauria de mostrar "Depurat !" , arregleu-ho de manera que aquest sigui el text literal
-$str = "Depurat ! ";
+$str = "Depurat !";
 echo substr($str, 0, 10);
 
 nou_Exercici(4);
+//////////////////////////////////////////////////////////////////
 // === Exercici 4 ===
 // De vegades per a depurar codi, cal consultar la documentació per entedre que s'està fent...
 // El print_r($setmana) hauria de donar: Array ( [0] => lluns [1] => marts [2] => mecres [3] => jous [4] => vendres [5] => ssabte [6] => umenge )
 // Busqueu què passa amb aquest codi i, a continuació, solucioneu-lo amb UN CARÀCTER!
 foreach($setmana as &$dia) {
     $dia = substr($dia, 2);
-
 }
 
 print_r($setmana);
 
 
-
-
 nou_Exercici(5);
+//////////////////////////////////////////////////////////////////
 // === Exercici 5 ===
 // La matriu hauria d'imprimir totes les lletres de l'alfabet (a-z), però en canvi fa +aa-yz
 // Arregla el codi de manera que el bucle for només pose de la a-z a la matriu
 $arr = [];
 for ($lletra = ord('a'); $lletra <= ord('z'); $lletra++) {
-    array_push($arr, chr( $lletra));
+    array_push($arr, chr($lletra));
 }
 
 print_r($arr); // Array ([0] => a, [1] => b, [2] => c, ...) a-z array de l'alfabet
 
 
 nou_Exercici(6);
+//////////////////////////////////////////////////////////////////
 // === Final Exercici ===
 // El següent codi hauria de mostrar el següent al final:
 // Aquest és el nom: $nom - $nom2
@@ -70,7 +71,7 @@ nou_Exercici(6);
 // Exemples: capità estrany, vídua formiga, home de ferro, ...
 $arr = [];
 
-/*
+
 function combineNames($str1 = "", $str2 = "") {
     $params = [$str1, $str2];
     foreach($params as $param) {
@@ -101,10 +102,10 @@ function randomHeroName()
 }
 
 echo "El nom és: " . combineNames();
-*//*
+
 nou_Exercici(7);
 function copyright(int $any) {
-    return "&copy;" . $any . "Entorns de Desenvolupament";
+    return "&copy; $any Entorns de Desenvolupament";
 }
 //imprimeix el copyright
 echo copyright(date('Y'));
@@ -121,13 +122,13 @@ function login(string $email, string $password) {
     return 'Accés denegat';
 }
 /* No canvieu el codi de les línies següents: */
-/*
+
 //hauria de saludar l'usuari amb el seu nom complet (Manel Viel)
 echo login('mviel@exemple.com', 'florida');
 //hauria de dir: Accés denegat
 echo login('mviel@exemple.com', 'dfgidfgdfg');
 //hauria de dir: Accés denegat
-echo login('vicent@exemple', 'erroni');*/
+echo login('vicent@exemple', 'erroni');
 
 /* A partir d'ací, ja podeu modificar el codi*/
 
@@ -136,20 +137,20 @@ function isLinkValid(string $link) {
     $inacceptables = array('https:','.doc','.pdf', '.jpg', '.jpeg', '.gif', '.bmp', '.png');
 
     foreach ($inacceptables as $inacceptable) {
-        if (strpos($link, $inacceptable) !==    false) {
+        if (strpos($link, $inacceptable) == true) {
             return 'Trobat un inacceptable<br />';
         }
     }
     return 'Acceptable<br />';
 }
 //link invàlid
-echo isLinkValid('http://www.google.com/hack.pdf');
+isLinkValid('http://www.google.com/hack.pdf');
 //link invàlid
-echo isLinkValid('https://google.com');
+isLinkValid('https://google.com');
 //link VÀLID
-echo isLinkValid('http://google.com');
+isLinkValid('http://google.com');
 //link VALID
-echo isLinkValid('http://google.com/test.txt');
+isLinkValid('http://google.com/test.txt');
 
 
 nou_Exercici(10);
@@ -159,8 +160,7 @@ nou_Exercici(10);
 $possiblesFruites = ['poma', 'llibre', 'carn de vedella', 'plàtan', 'cirera', 'tomaca', 'cotxe'];
 $fruitesValides = ['poma', 'pera', 'plàtan', 'cirera', 'tomaca'];
 //canvieu el codi del bucle
-$numElements=count($possiblesFruites);
-for($i=0; $i < $numElements; $i++) {
+for($i=0; $i <= count($possiblesFruites); $i++) {
     if(!in_array($possiblesFruites[$i], $fruitesValides)) {
         unset($possiblesFruites[$i]);
     }
