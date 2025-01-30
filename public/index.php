@@ -1,32 +1,15 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>POO 3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEV61_1</title>
 </head>
 <body>
+    <?php
+    
+    
+
+    ?>
 </body>
 </html>
-<?php
-class Instrumento{
-public $musicoAsociado;
-public $notas;
-
-}
-class Cuerda extends Instrumento{
-public $numCuerdas;
-
-}
-class Viento extends Instrumento{
-public $metal;
-public $madera;
-}
-
-class Percusion extends Instrumento{
-public $baquetas;
-public $manos;
-
-}
-
-$Guitarra = new Instrumento();
-
- 
-?>

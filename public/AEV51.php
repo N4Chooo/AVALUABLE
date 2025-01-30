@@ -293,4 +293,4 @@ echo "Podriamos ganar $resultadoventas € vendiendo pescado" ;
 
 ?> 
 </body>
-</html>
+</html> 
